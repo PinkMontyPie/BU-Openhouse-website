@@ -1,5 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 
+body {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  background-color: #151515;
+}
 
+@media (min-width: 640px) {
+  .containers {
+    margin: 0 auto;
+    max-width: 1340px;
+  }
+
+  .containers-img {
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+}
+
+.animate-class {
+  opacity: 0;
+  scale: 0.9;
+  transition: all 0.8s ease;
+  transform: translateY(50px);
+}
+
+.show {
+  opacity: 1;
+  scale: 1;
+  transform: translateY(0);
+}
+
+.glide {
+    margin: 0 auto;
+}
+
+.glide__slide {
+    width: calc(33.33% - 20px); /* Adjust for the gap */
+}
+
+.glide__slide:last-child {
+    margin-right: 0; /* Remove margin for the last slide */
+}
+
+.glide__slide img {
+    width: 50%;
+    height: auto;
+}
