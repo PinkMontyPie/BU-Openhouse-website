@@ -11,7 +11,9 @@
     <div
       class="flex flex-row justify-between items-center h-[100px] w-full sticky top-0 animate-class z-50 px-5 navbar"
     >
-      <div class="containers flex flex-row justify-between items-center h-[110px] w-full sticky top-0 animate-class z-50 px-5 navbar">
+      <div
+        class="containers flex flex-row justify-between items-center h-[110px] w-full sticky top-0 animate-class z-50 px-5 navbar"
+      >
         <div class="flex justify-center items-center gap-4">
           <a
             href=""
@@ -28,7 +30,7 @@
           class="flex flex-row justify-between items-center gap-5 rounded-xl drop-shadow-xl"
         >
           <a
-            href="index.html"
+            href="home.html"
             class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
             >Home</a
           >
@@ -38,7 +40,7 @@
             >About</a
           >
           <a
-            href="contact.html"
+            href="schedule.html"
             class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
             >Schedule</a
           >
@@ -58,12 +60,7 @@
     <div
       class="containers flex flex-col justify-center items-center py-32 lg:py-40 animate-class px-8 relative"
     >
-      <img
-        src="image/cre1.png"
-        alt=""
-        width="150"
-        class="animate-bounce"
-      />
+      <img src="image/cre1.png" alt="" width="150" class="animate-bounce" />
       <div class="flex flex-col justify-center items-center pt-10 pb-20">
         <h1
           class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-center text-[60px] md:text-[100px] animate-class"
@@ -77,13 +74,19 @@
         </h2>
       </div>
       <div
-        class="flex flex-row items-center px-8 py-3 gap-5 bg-white rounded-full animate-class"
+        class="relative flex flex-row items-center px-8 py-3 gap-5 bg-gradient-to-r from-[#961ADF] to-[#F68129] rounded-full animate-class"
       >
         <div
-          class="flex justify-center items-center bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold gap-1"
+          class="absolute inset-0 rounded-full border-white border-2 bg-clip-padding"
+          style="
+            background-image: linear-gradient(to right, #961adf, #f68129);
+            z-index: -1;
+          "
+        ></div>
+        <div
+          class="flex justify-center items-center bg-2 bg-clip-text text-white  bg-transparent font-bold gap-1"
         >
-          <a href="">Registration |</a>
-          <a href="">Login</a>
+          <a href="workshop.html">Explore Workshop</a>
         </div>
       </div>
     </div>
