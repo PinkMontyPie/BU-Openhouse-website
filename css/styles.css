@@ -5,16 +5,17 @@ body {
   background-color: #151515;
 }
 
+.containers {
+  margin: 0 auto;
+  max-width: 1340px;
+}
+
 @media (min-width: 640px) {
   .containers {
-    margin: 0 auto;
+
     max-width: 1340px;
   }
 
-  .containers-img {
-    margin: 0 auto;
-    max-width: 1600px;
-  }
 }
 
 .animate-class {
@@ -30,19 +31,42 @@ body {
   transform: translateY(0);
 }
 
-.glide {
-    margin: 0 auto;
+.delay-1 {
+  transition-delay: 0.1s;
 }
 
-.glide__slide {
-    width: calc(33.33% - 20px); /* Adjust for the gap */
+.delay-2 {
+  transition-delay: 0.2s;
 }
 
-.glide__slide:last-child {
-    margin-right: 0; /* Remove margin for the last slide */
+.delay-3 {
+  transition-delay: 0.3s;
 }
 
-.glide__slide img {
-    width: 50%;
-    height: auto;
+.delay-4 {
+  transition-delay: 0.4s;
+}
+
+.delay-5 {
+  transition-delay: 0.5s;
+}
+
+.delay-6 {
+  transition-delay: 0.6s;
+}
+
+.delay-7 {
+  transition-delay: 0.7s;
+}
+
+.delay-8 {
+  transition-delay: 0.8s;
+}
+
+.delay-9 {
+  transition-delay: 0.9s;
+}
+
+.delay-10 {
+  transition-delay: 1s;
 }
