@@ -1,10 +1,33 @@
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
   });
+});
 
-  const hiddenElements = document.querySelectorAll(".animate-class");
-  hiddenElements.forEach((el) => observer.observe(el));
+const hiddenElements = document.querySelectorAll(".animate-class");
+hiddenElements.forEach((el) => observer.observe(el));
+
+// Scroll to the top of the page smoothly
+window.scrollTo({
+  top: 0,
+  behavior: "smooth",
+});
+
+// Scroll down by 300 pixels smoothly
+window.scrollBy({
+  top: 300,
+  behavior: "smooth",
+});
+
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  
+  // When the scroll is more than 50px, add the "scrolled" class
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
