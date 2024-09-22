@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BU openhouse</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <main class="h-auto w-full">
+    <div
+      class="containers flex flex-row justify-between items-center h-[100px] w-full sticky top-0 animate-class z-50 px-8"
+    >
+      <div
+        class="flex flex-row items-center px-[25px] py-[15px] gap-5 bg-white rounded-full drop-shadow-xl"
+      >
+        <div class="flex justify-center items-center gap-5">
+          <img src="image/buicon.png" alt="logo" class="h-[30px] w-auto" />
+          <h1 class="text-[#151515] text-[16px] font-bold hidden md:flex">
+            BU Open House 2024
+          </h1>
+        </div>
+        <div class="h-8 w-[2px] bg-slate-200 rounded-full hidden md:flex"></div>
+        <div
+          class="justify-center items-center bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold gap-1 hidden md:flex"
+        >
+          <a href="">Registration |</a>
+          <a href="">Login</a>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col lg:flex-row items-center px-[30px] py-[15px] bg-white rounded-full drop-shadow-xl"
+      >
+        <!-- Menu links (hidden on smaller screens) -->
+        <div id="menu" class="justify-center items-center gap-8 hidden lg:flex">
+          <a
+            href="index.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >About</a
+          >
+          <a
+            href="contact.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >Schedule</a
+          >
+        </div>
+
+        <!-- Hamburger icon (visible on small screens) -->
+        <a href="#" id="menu-toggle" class="lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="2em"
+            height="2em"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none">
+              <path
+                d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+              />
+              <path
+                fill="currentColor"
+                d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z"
+              />
+            </g>
+          </svg>
+        </a>
+        <div id="mobile-menu" class="flex flex-col gap-4 lg:hidden">
+          <a
+            href="index.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >About</a
+          >
+          <a
+            href="contact.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >Schedule</a
+          >
+        </div>
+      </div>
+
+      <!-- Hidden mobile menu (visible when hamburger is clicked) -->
+      <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
+    </div>
+
+    <div class="containers relative mt-8 animate-class px-5">
+      <img
+        src="image/banner.png"
+        alt=""
+        class="absolute top-0 blur-3xl -z-50"
+      />
+      <img src="image/banner.png" alt="" class="z-50" />
+    </div>
+
+    <div
+      class="containers flex flex-col justify-center items-center py-32 lg:py-40 animate-class px-8"
+    >
+      <img
+        src="image/cre1.png"
+        alt=""
+        width="150"
+        class="hover:animate-bounce"
+      />
+      <div class="flex flex-col justify-center items-center pt-10 pb-20">
+        <h1
+          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-center text-[60px] md:text-[120px] animate-class"
+        >
+          It’s Time To Be A Pro
+        </h1>
+        <h2
+          class="font-medium text-white text-[20px] md:text-[30px] animate-class"
+        >
+          Join us in Openhouse Today!
+        </h2>
+      </div>
+      <div
+        class="flex flex-row items-center px-8 py-3 gap-5 bg-white rounded-full animate-class"
+      >
+        <div
+          class="flex justify-center items-center bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold gap-1"
+        >
+          <a href="">Registration |</a>
+          <a href="">Login</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="containers flex flex-col gap-10 px-8">
+      <div class="w-full flex flex-row justify-between items-center">
+        <h1
+          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[30px] lg:text-[50px] animate-class delay-1"
+        >
+          Highlights
+        </h1>
+        <img
+          src="image/cre2.png"
+          class="h-[100px] lg:h-[180px] w-auto"
+          alt=""
+        />
+      </div>
+      <div
+        class="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 pb-10 animate-class delay-2"
+      >
+        <img
+          src="image/act1.png"
+          alt=""
+          class="rounded-xl hover:scale-105 transition-all hover:-rotate-3 hover:drop-shadow-[0_30px_30px_rgba(130,13,231,0.25)]"
+        />
+        <img
+          src="image/act2.png"
+          alt=""
+          class="rounded-xl hover:scale-105 transition-all hover:rotate-3 hover:drop-shadow-[0_30px_30px_rgba(247,80,183,0.25)]"
+        />
+        <img
+          src="image/act3.png"
+          alt=""
+          class="rounded-xl hover:scale-105 transition-all hover:-rotate-3 hover:drop-shadow-[0_30px_30px_rgba(23,204,252,0.25)]"
+        />
+        <img
+          src="image/act4.png"
+          alt=""
+          class="rounded-xl hover:scale-105 transition-all hover:rotate-3 hover:drop-shadow-[0_30px_30px_rgba(0,194,159,0.25)]"
+        />
+        <img
+          src="image/act5.png"
+          alt=""
+          class="rounded-xl hover:scale-105 transition-all hover:-rotate-3 hover:drop-shadow-[0_30px_30px_rgba(255,59,9,0.25)]"
+        />
+        <img
+          src="image/act6.png"
+          alt=""
+          class="rounded-xl hover:scale-105 transition-all hover:rotate-3 hover:drop-shadow-[0_30px_30px_rgba(215,212,203,0.25)]"
+        />
+      </div>
+    </div>
+
+    <div class="containers flex flex-col gap-10 px-8">
+      <div class="w-full flex flex-row justify-between items-center">
+        <h1
+          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[30px] lg:text-[50px] animate-class delay-1"
+        >
+          Schedule
+        </h1>
+        <img
+          src="image/cre2.png"
+          class="h-[100px] lg:h-[180px] w-auto"
+          alt=""
+        />
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </main>
+</html>
