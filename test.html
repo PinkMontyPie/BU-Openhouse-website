@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BU Open House Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="h-screen w-full bg-gray-100">
+    <!-- Navbar Section -->
+    <div
+      class="containers flex flex-row justify-between items-center h-[100px] w-full sticky top-0 bg-gray-50 z-50 px-8"
+    >
+      <div
+        class="flex flex-row items-center px-[25px] py-[15px] gap-5 bg-white rounded-full drop-shadow-xl"
+      >
+        <div class="flex justify-center items-center gap-5">
+          <img src="image/buicon.png" alt="logo" class="h-[30px] w-auto" />
+          <h1 class="text-[#151515] text-[16px] font-bold hidden md:flex">
+            BU Open House 2024
+          </h1>
+        </div>
+        <div class="h-8 w-[2px] bg-slate-200 rounded-full hidden md:flex"></div>
+        <div
+          class="justify-center items-center bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold gap-1 hidden md:flex"
+        >
+          <a href="">Registration |</a>
+          <a href="">Login</a>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col lg:flex-row items-center px-[30px] py-[15px] bg-white rounded-full drop-shadow-xl"
+      >
+        <!-- Menu links (hidden on smaller screens) -->
+        <div id="menu" class="justify-center items-center gap-8 hidden lg:flex">
+          <a
+            href="index.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >About</a
+          >
+          <a
+            href="contact.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >Schedule</a
+          >
+        </div>
+
+        <!-- Hamburger icon (visible on small screens) -->
+        <a href="#" id="menu-toggle" class="lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="2em"
+            height="2em"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none">
+              <path
+                fill="currentColor"
+                d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z"
+              />
+            </g>
+          </svg>
+        </a>
+        <div id="mobile-menu" class="hidden flex-col gap-4 lg:hidden">
+          <a
+            href="index.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >About</a
+          >
+          <a
+            href="contact.html"
+            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
+            >Schedule</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden mobile menu (visible when hamburger is clicked) -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
