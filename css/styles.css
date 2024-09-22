@@ -82,3 +82,27 @@ body {
 .delay-10 {
   transition-delay: 1s;
 }
+
+
+.navbar {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* You can adjust the color and transparency */
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 40px 40px;
+
+}
+
+.workshop-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#modal {
+  display: none; /* Start hidden */
+}
