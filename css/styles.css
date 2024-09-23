@@ -64,7 +64,7 @@ body {
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.8); /* You can adjust the color and transparency */
   backdrop-filter: blur(10px);
-  border-radius: 0 0 40px 40px;
+  border-radius: 0px;
 
 }
 
