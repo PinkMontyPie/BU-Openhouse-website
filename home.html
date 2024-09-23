@@ -17,7 +17,7 @@
         <div class="flex justify-center items-center gap-4">
           <a
             href=""
-            class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all hover:-rotate-3 hover:drop-shadow-[0_30px_30px_rgba(130,13,231,0.25)]"
+            class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all hover:rotate-3 hover:drop-shadow-[0_10px_10px_rgba(247,80,183,0.25)]"
             >Registration</a
           >
         </div>
@@ -48,19 +48,44 @@
       </div>
     </div>
 
-    <div class="containers relative animate-class px-5">
+    <div class="relative px-5">
       <img
         src="image/banner.png"
         alt=""
-        class="absolute top-0 right-0 blur-3xl -z-50 animate-pulse"
+        class="absolute top-0 right-0 blur-3xl -z-50 animate-class delay-1"
       />
-      <img src="image/banner.png" alt="" class="z-50" />
+      <div
+        class="h-screen w-full containers flex flex-col justify-start items-center gap-5 py-20"
+      >
+        <div
+          class="font-bold text-[30px] flex justify-center items-center px-8 py-2 bg-white rounded-full animate-class delay-2"
+        >
+          Hello Everyones 👋
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <h1
+            class="font-bold text-[120px] text-center bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent stroke animate-class delay-3"
+          >
+            BU Openhouse 24
+          </h1>
+          <h2 class="text-[30px] animate-class delay-4">
+            August 29-31 • Khlong Luang, Pathum Thani
+          </h2>
+        </div>
+        <div>
+
+        </div>
+        <img src="image/cre1.png" alt="" width="300" class="absolute bottom-0 right-52 animate-class delay-6">
+        <img src="image/cre3.png" alt="" class="absolute bottom-0 animate-class delay-5">
+        <img src="image/cre2.png" alt="" width="300" class="absolute bottom-0 left-52 animate-class delay-7">
+      </div>
+      <!-- <img src="image/banner.png" alt="" class="z-50" /> -->
     </div>
 
     <div
-      class="containers flex flex-col justify-center items-center py-32 lg:py-40 animate-class px-8 relative"
+      class="containers flex flex-col justify-center items-center py-32 lg:py-52 animate-class px-8 relative"
     >
-      <img src="image/cre1.png" alt="" width="150" class="animate-bounce" />
+      <!-- <img src="image/cre1.png" alt="" width="150" class="animate-bounce" /> -->
       <div class="flex flex-col justify-center items-center pt-10 pb-20">
         <h1
           class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-center text-[60px] md:text-[100px] animate-class"
@@ -73,25 +98,15 @@
           Join us in Openhouse Today 👀
         </h2>
       </div>
-      <div
-        class="relative flex flex-row items-center px-8 py-3 gap-5 bg-gradient-to-r from-[#961ADF] to-[#F68129] rounded-full animate-class"
+
+      <a
+        href="workshop.html"
+        class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all hover:rotate-3 hover:drop-shadow-[0_10px_10px_rgba(247,80,183,0.25)]"
+        >Explore Workshop</a
       >
-        <div
-          class="absolute inset-0 rounded-full border-white border-2 bg-clip-padding"
-          style="
-            background-image: linear-gradient(to right, #961adf, #f68129);
-            z-index: -1;
-          "
-        ></div>
-        <div
-          class="flex justify-center items-center bg-2 bg-clip-text text-white  bg-transparent font-bold gap-1"
-        >
-          <a href="workshop.html">Explore Workshop</a>
-        </div>
-      </div>
     </div>
 
-    <div class="containers flex flex-col gap-10 px-8">
+    <div class="containers flex flex-col gap-10 px-8 pb-20">
       <div class="w-full flex flex-row justify-between items-center">
         <h1
           class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[30px] lg:text-[50px] animate-class delay-1"
@@ -148,7 +163,7 @@
           Schedule
         </h1>
         <img
-          src="image/cre2.png"
+          src="image/cre3.png"
           class="h-[100px] lg:h-[180px] w-auto"
           alt=""
         />

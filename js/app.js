@@ -9,17 +9,8 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".animate-class");
 hiddenElements.forEach((el) => observer.observe(el));
 
-// Scroll to the top of the page smoothly
-window.scrollTo({
-  top: 0,
-  behavior: "smooth",
-});
 
-// Scroll down by 300 pixels smoothly
-window.scrollBy({
-  top: 300,
-  behavior: "smooth",
-});
+
 
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.navbar');
