@@ -1,8 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: "LINESeedSansTH_Bd";
+  src: url(/font/LINESeedSansTH_Bd.ttf);
+}
+
+@font-face {
+  font-family: "LINESeedSansTH_He";
+  src: url(/font/LINESeedSansTH_He.ttf);
+}
+
+@font-face {
+  font-family: "LINESeedSansTH_Rg";
+  src: url(/font/LINESeedSansTH_Rg.ttf);
+}
+
+@font-face {
+  font-family: "LINESeedSansTH_Th";
+  src: url(/font/LINESeedSansTH_Th.ttf);
+}
+
+@font-face {
+  font-family: "LINESeedSansTH_XBD";
+  src: url(/font/LINESeedSansTH_XBd.ttf);
+}
+
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "LINESeedSansTH_RG", sans-serif;
   background-color: #151515;
+}
+
+.font-thin {
+  font-family: "LINESeedSansTH_Th", sans-serif;
+}
+
+.font-heavy {
+  font-family: "LINESeedSansTH_He", sans-serif;
+}
+
+.font-regular {
+  font-family: "LINESeedSansTH_Rg", sans-serif;
+}
+
+.font-bold {
+  font-family: "LINESeedSansTH_XBD", sans-serif;
 }
 
 .containers {
@@ -12,7 +52,6 @@ body {
 
 @media (min-width: 640px) {
   .containers {
-
     max-width: 1340px;
   }
 }
@@ -25,7 +64,7 @@ body {
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.8); /* You can adjust the color and transparency */
   backdrop-filter: blur(10px);
-  border-radius: 0 0 40px 40px;
+  border-radius: 0px;
 
 }
 
@@ -104,4 +143,9 @@ body {
 
 #modal {
   display: none; /* Start hidden */
+}
+
+
+.stroke{
+  -webkit-text-stroke: 2px #fff;
 }

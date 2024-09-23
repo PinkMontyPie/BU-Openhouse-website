@@ -66,21 +66,21 @@
     </div>
 
     <!-- Workshop List Section -->
-    <div class="containers flex flex-col justify-center items-center py-6 px-8 ">
+    <div class="containers flex flex-col justify-center items-center py-6 px-8">
       <h1
-        class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[40px] md:text-[60px]"
+        class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[40px] md:text-[60px] animate-class"
       >
         Workshops
       </h1>
       <h2
-        class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[20px] md:text-[30px]"
+        class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[20px] md:text-[30px] animate-class"
       >
         Explore our workshop here!
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 w-full">
         <!-- Workshop Card 1 -->
         <div
-          class="bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:rotate-1 hover:drop-shadow-[0_30px_30px_rgba(215,212,203,0.25)] "
+          class="animate-class bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:rotate-1 hover:drop-shadow-[0_30px_30px_rgba(215,212,203,0.25)] "
           data-title="Full-Stack Web Development Techniques (Front End and Back End)"
           data-description="Calling anyone passionate about programming and who loves the complexity of code writing! Here's your chance to join activities that help you experience both Front-End and Back-End, gaining in-depth knowledge and advanced techniques from experts."
           data-certificate="Yes"
@@ -112,7 +112,7 @@
 
         <!-- Workshop Card 2 -->
         <div
-          class="bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:-rotate-1 hover:drop-shadow-[0_30px_30px_rgba(23,204,252,0.25)]"
+          class="animate-class bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:-rotate-1 hover:drop-shadow-[0_30px_30px_rgba(23,204,252,0.25)]"
           data-title="Data Analysis and Visualization Techniques (Data Science and Data Visualization)"
           data-description="Explore data analysis techniques and tools to derive insights from your data."
           data-certificate="Yes"
@@ -146,7 +146,7 @@
 
         <!-- Workshop Card 3 -->
         <div
-          class="bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:rotate-1 hover:drop-shadow-[0_30px_30px_rgba(23,204,252,0.25)]"
+          class="animate-class bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:rotate-1 hover:drop-shadow-[0_30px_30px_rgba(23,204,252,0.25)] "
           data-title="Techniques for System Development and Becoming a White Hat Cyber Defender (White Hacker)"
           data-description="IT workshop is calling for those interested in bugs and becoming a White Hat Hacker! It offers hands-on activities and practice to develop core skills for being a White Hat Hero, especially in Cyber Security."
           data-certificate="Yes"
@@ -180,7 +180,7 @@
 
         <!-- Workshop Card 4 -->
         <div
-          class="bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:-rotate-1 hover:drop-shadow-[0_30px_30px_rgba(23,204,252,0.25)]"
+          class="animate-class bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:-rotate-1 hover:drop-shadow-[0_30px_30px_rgba(23,204,252,0.25)]"
           data-title="Developing with Low-Code Application Platform"
           data-description="Do you want to be an application developer? This is your chance to experience application development through hands-on activities in the easiest and fastest way with Oracle APEX!"
           data-certificate="Yes"
@@ -212,7 +212,7 @@
 
         <!-- Workshop Card 5 (No Certificate) -->
         <div
-          class="bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:rotate-1 hover:drop-shadow-[0_30px_30px_rgba(255,59,9,0.25)]"
+          class="animate-class bg-gray-800 p-6 pt-8 pb-8 rounded-lg shadow-lg transition-transform hover:scale-105 cursor-pointer workshop-card h-full flex flex-col border-2 border-white hover:rotate-1 hover:drop-shadow-[0_30px_30px_rgba(255,59,9,0.25)]"
           data-title="A Successful Story of Professional in IT Industry"
           data-description="For anyone passionate about technology but still questioning what exactly Information Technology identity is, you are invited to get answers from field experts and leading IT companies. Let them ignite your inspiration and guide you on the right career path in technology!"
           data-certificate="No Certificate"
@@ -247,7 +247,7 @@
     <!-- Modal -->
     <div
       id="modal"
-      class="fixed inset-0 bg-black bg-opacity-75 justify-center items-center hidden  "
+      class="fixed inset-0 bg-black bg-opacity-75 justify-center items-center hidden"
     >
       <div class="bg-gray-800 p-8 rounded-lg w-1/2 mx-auto mt-20 border-2 border-white ">
         <h2 id="modal-title" class="text-2xl font-bold mb-4"></h2>
@@ -287,6 +287,7 @@
       </div>
     </div>
 
+    <script src="js/app.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
