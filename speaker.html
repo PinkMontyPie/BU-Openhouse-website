@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speaker Profiles - BU Open House</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Three-dot loading animation */
+    .dot-loader {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 20px;
+    }
+
+    .dot-loader div {
+      position: absolute;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #F68129;
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+
+    .dot-loader div:nth-child(1) {
+      left: 8px;
+      animation: dotLoader 0.6s infinite;
+    }
+
+    .dot-loader div:nth-child(2) {
+      left: 32px;
+      animation: dotLoader 0.6s infinite 0.2s;
+    }
+
+    .dot-loader div:nth-child(3) {
+      left: 56px;
+      animation: dotLoader 0.6s infinite 0.4s;
+    }
+
+    @keyframes dotLoader {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.5);
+      }
+    }
+
+    /* Hide and show loading */
+    .loading-cards {
+      display: none;
+      margin-top: 16px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loading-cards.active {
+      display: flex;
+    }
+
+    /* Speaker card styling */
+    .speaker-card {
+      position: relative;
+    }
+
+    /* Hides the speaker cards when loading */
+    .speaker-card.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <div class="flex flex-row justify-between items-center h-[110px] w-full sticky top-0 z-50 px-5 bg-black border-b border-gray-800">
+    <div class="containers flex flex-row justify-between items-center w-full">
+      <div class="flex items-center gap-4">
+        <a href="home.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all">
+          Back
+        </a>
+      </div>
+      <div class="flex justify-center items-center gap-5">
+        <img src="image/buicon.png" alt="logo" class="h-[70px] w-auto" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="container mx-auto mt-10 px-8">
+    <div class="flex justify-center mb-8">
+      <input
+        type="text"
+        placeholder="Search for speakers or sessions..."
+        class="w-full md:w-1/2 px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-[#F68129]"
+        id="searchInput"
+        oninput="showLoadingAndSearch()"
+      />
+    </div>
+  </div>
+
+  <!-- Speakers Section -->
+  <div class="container mx-auto py-8 px-8 relative">
+    <h1 class="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent">
+      Meet Our Speakers
+    </h1>
+
+    <!-- Loading Indicator under "Meet Our Speakers" -->
+    <div id="loadingCards" class="loading-cards">
+      <div class="dot-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div id="speakerGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+      <!-- Speaker 1 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card" data-name="Pai Soravith" data-session="FullStack Development">
+        <img src="image/speaker1.jpg" alt="Speaker 1" class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover">
+        <h2 class="text-center mt-4 text-xl font-bold text-white">Pai Soravith</h2>
+        <p class="text-center text-gray-400">CTO, XYZ Corp.</p>
+        <p class="mt-2 text-center text-[#F68129]">Session: FullStack Developer - Build your own website</p>
+        <p class="mt-4 text-gray-300 text-center">Expert in web development and cybersecurity with 15+ years of experience.</p>
+        <div class="flex justify-center mt-6">
+          <a href="speaker1.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform">
+            View Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- Speaker 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card" data-name="Jira Anuchit" data-session="Data Analysis">
+        <img src="image/speaker2.jpg" alt="Speaker 2" class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover">
+        <h2 class="text-center mt-4 text-xl font-bold text-white">Jira Anuchit</h2>
+        <p class="text-center text-gray-400">Data Scientist, ABC Analytics</p>
+        <p class="mt-2 text-center text-[#F68129]">Session: Data Analysis - More of your data</p>
+        <p class="mt-4 text-gray-300 text-center">Specialist in big data and machine learning with industry expertise.</p>
+        <div class="flex justify-center mt-6">
+          <a href="speaker2.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform">
+            View Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- Speaker 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card" data-name="Anya Worasit" data-session="Cyber Security">
+        <img src="image/speaker3.jpg" alt="Speaker 3" class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover">
+        <h2 class="text-center mt-4 text-xl font-bold text-white">Anya Worasit</h2>
+        <p class="text-center text-gray-400">Security Analyst, White Hat Security</p>
+        <p class="mt-2 text-center text-[#F68129]">Session: Cyber Security - White Hat Hacker</p>
+        <p class="mt-4 text-gray-300 text-center">Cybersecurity expert with experience in ethical hacking and threat analysis.</p>
+        <div class="flex justify-center mt-6">
+          <a href="speaker3.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform">
+            View Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- Speaker 4 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card" data-name="Somchai Kritsanakorn" data-session="Low-Code Development">
+        <img src="image/speaker4.jpg" alt="Speaker 4" class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover">
+        <h2 class="text-center mt-4 text-xl font-bold text-white">Somchai Kritsanakorn</h2>
+        <p class="text-center text-gray-400">Low-Code Developer, LowCode Innovations</p>
+        <p class="mt-2 text-center text-[#F68129]">Session: Developing with Low-Code Application Platform</p>
+        <p class="mt-4 text-gray-300 text-center">Innovative solutions with low-code platforms to accelerate development.</p>
+        <div class="flex justify-center mt-6">
+          <a href="speaker4.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform">
+            View Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- Speaker 5 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card" data-name="Maya Chan" data-session="IT Professional Journey">
+        <img src="image/speaker5.jpg" alt="Speaker 5" class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover">
+        <h2 class="text-center mt-4 text-xl font-bold text-white">Maya Chan</h2>
+        <p class="text-center text-gray-400">Consultant, TechPro Consulting</p>
+        <p class="mt-2 text-center text-[#F68129]">Session: A successful story of professional in IT Industry</p>
+        <p class="mt-4 text-gray-300 text-center">Guiding young professionals through the IT industry with mentorship and growth.</p>
+        <div class="flex justify-center mt-6">
+          <a href="speaker5.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform">
+            View Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to show the card grid loading indicator, hide cards, wait for 1 second, then perform the search
+    function showLoadingAndSearch() {
+      const loadingCards = document.getElementById('loadingCards');
+      const cards = document.querySelectorAll('.speaker-card');
+      loadingCards.classList.add('active');
+
+      // Hide all cards during loading
+      cards.forEach(card => {
+        card.classList.add('hidden');
+      });
+
+      // Simulate a loading delay of 1 second
+      setTimeout(() => {
+        filterSpeakers();
+        loadingCards.classList.remove('active');
+        cards.forEach(card => {
+          card.classList.remove('hidden');
+        });
+      }, 1000);
+    }
+
+    // Function to filter speakers based on the search input
+    function filterSpeakers() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.speaker-card');
+
+      cards.forEach(card => {
+        const name = card.getAttribute('data-name').toLowerCase();
+        const session = card.getAttribute('data-session').toLowerCase();
+
+        if (name.includes(input) || session.includes(input)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
