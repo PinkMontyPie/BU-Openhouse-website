@@ -3,193 +3,296 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BU openhouse</title>
+    <title>BU Open House</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <main class="h-auto w-full">
-    <div class="containers flex flex-row justify-between items-center h-[100px] w-full sticky top-0 animate-class z-50 px-8">
-      <div class="flex flex-row items-center px-[25px] py-[15px] gap-5 bg-white rounded-full drop-shadow-xl">
-        <div class="flex justify-center items-center gap-5">
-          <img src="image/buicon.png" alt="logo" class="h-[30px] w-auto" />
-          <h1 class="text-[#151515] text-[16px] font-bold hidden md:flex">
-            BU Open House 2024
+  <body>
+    <main
+      class="h-auto w-full bg-gradient-to-b from-gray-800 to-gray-900 text-white"
+    >
+      <div
+        class="flex flex-row justify-between items-center h-[100px] w-full sticky top-0 z-50 px-5 navbar"
+      >
+        <div
+          class="containers flex flex-row justify-between items-center w-full"
+        >
+          <div class="flex justify-center items-center gap-4">
+            <a
+              href="registration.html"
+              class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all hover:rotate-3 hover:drop-shadow-lg"
+              >Registration</a
+            >
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="image/buicon.png" alt="logo" class="h-[50px] w-auto" />
+          </div>
+          <div class="flex flex-row justify-between items-center gap-5">
+            <a
+              href="home.html"
+              class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+              >About</a
+            >
+            <a
+              href="speaker.html"
+              class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+              >Speaker</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="containers flex flex-col lg:flex-row justify-between items-center py-20 lg:py-10 px-8"
+      >
+        <div
+          class="flex flex-col justify-center lg:w-1/2 animate-class sticky items-center"
+        >
+          <h1
+            class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold  text-[24px] md:text-[48px]"
+          >
+            Got Questions?
+          </h1>
+          <img src="image/cre1.png" alt="" width="150" class="" />
+          <h1
+            class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold pb-20 text-[24px] md:text-[48px]"
+          >
+            Get your answer here!
           </h1>
         </div>
-        <div class="h-8 w-[2px] bg-slate-200 rounded-full hidden md:flex"></div>
-        <div
-          class="justify-center items-center bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold gap-1 hidden md:flex">
-          <a href="">Registration |</a>
-          <a href="">Login</a>
+
+        <div class="max-w-2xl lg:w-1/2 mt-10 lg:mt-0">
+          <h2 class="text-white font-bold text-[30px] md:text-[48px] mb-6">
+            General Questions
+          </h2>
+
+          <!-- Accordion Items -->
+          <div class="space-y-4">
+            <div
+              class="border border-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            >
+              <button
+                class="w-full text-left py-4 px-6 flex items-center justify-between focus:outline-none accordion-toggle"
+                data-target="content-1"
+              >
+                <span class="text-lg font-semibold">What is Elementor?</span>
+                <span
+                  class="transform transition-transform duration-300 icon"
+                  id="icon-1"
+                  >+</span
+                >
+              </button>
+              <div
+                class="pl-4 pt-2 pb-4 hidden accordion-content"
+                id="content-1"
+              >
+                <p class="text-gray-300">
+                  Elementor is the ultimate & FREE WordPress website builder
+                  that lets you create beautiful websites in the easiest and
+                  quickest way possible.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border border-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            >
+              <button
+                class="w-full text-left py-4 px-6 flex items-center justify-between focus:outline-none accordion-toggle"
+                data-target="content-2"
+              >
+                <span class="text-lg font-semibold"
+                  >Does it work with all themes?</span
+                >
+                <span
+                  class="transform transition-transform duration-300 icon"
+                  id="icon-2"
+                  >+</span
+                >
+              </button>
+              <div
+                class="pl-4 pt-2 pb-4 hidden accordion-content"
+                id="content-2"
+              >
+                <p class="text-gray-300">
+                  Yes, Elementor works with most WordPress themes that follow
+                  coding standards.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border border-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            >
+              <button
+                class="w-full text-left py-4 px-6 flex items-center justify-between focus:outline-none accordion-toggle"
+                data-target="content-3"
+              >
+                <span class="text-lg font-semibold"
+                  >Does it work with other WordPress plugins?</span
+                >
+                <span
+                  class="transform transition-transform duration-300 icon"
+                  id="icon-3"
+                  >+</span
+                >
+              </button>
+              <div
+                class="pl-4 pt-2 pb-4 hidden accordion-content"
+                id="content-3"
+              >
+                <p class="text-gray-300">
+                  Yes, Elementor is compatible with most WordPress plugins.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-white font-bold text-[30px] md:text-[48px] mb-6 pt-6">
+            Frequently asked questions
+          </h2>
+
+          <div class="space-y-4">
+            <div
+              class="border border-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            >
+              <button
+                class="w-full text-left py-4 px-6 flex items-center justify-between focus:outline-none accordion-toggle"
+                data-target="content-1"
+              >
+                <span class="text-lg font-semibold">What is Elementor?</span>
+                <span
+                  class="transform transition-transform duration-300 icon"
+                  id="icon-1"
+                  >+</span
+                >
+              </button>
+              <div
+                class="pl-4 pt-2 pb-4 hidden accordion-content"
+                id="content-1"
+              >
+                <p class="text-gray-300">
+                  Elementor is the ultimate & FREE WordPress website builder
+                  that lets you create beautiful websites in the easiest and
+                  quickest way possible.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border border-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            >
+              <button
+                class="w-full text-left py-4 px-6 flex items-center justify-between focus:outline-none accordion-toggle"
+                data-target="content-2"
+              >
+                <span class="text-lg font-semibold"
+                  >Does it work with all themes?</span
+                >
+                <span
+                  class="transform transition-transform duration-300 icon"
+                  id="icon-2"
+                  >+</span
+                >
+              </button>
+              <div
+                class="pl-4 pt-2 pb-4 hidden accordion-content"
+                id="content-2"
+              >
+                <p class="text-gray-300">
+                  Yes, Elementor works with most WordPress themes that follow
+                  coding standards.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border border-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            >
+              <button
+                class="w-full text-left py-4 px-6 flex items-center justify-between focus:outline-none accordion-toggle"
+                data-target="content-3"
+              >
+                <span class="text-lg font-semibold"
+                  >Does it work with other WordPress plugins?</span
+                >
+                <span
+                  class="transform transition-transform duration-300 icon"
+                  id="icon-3"
+                  >+</span
+                >
+              </button>
+              <div
+                class="pl-4 pt-2 pb-4 hidden accordion-content"
+                id="content-3"
+              >
+                <p class="text-gray-300">
+                  Yes, Elementor is compatible with most WordPress plugins.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border border-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            >
+              <button
+                class="w-full text-left py-4 px-6 flex items-center justify-between focus:outline-none accordion-toggle"
+                data-target="content-4"
+              >
+                <span class="text-lg font-semibold"
+                  >What is Elementor Pro?</span
+                >
+                <span
+                  class="transform transition-transform duration-300 icon"
+                  id="icon-4"
+                  >+</span
+                >
+              </button>
+              <div
+                class="pl-4 pt-2 pb-4 hidden accordion-content"
+                id="content-4"
+              >
+                <p class="text-gray-300">
+                  Elementor Pro is the paid version with additional advanced
+                  features.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border border-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            >
+              <button
+                class="w-full text-left py-4 px-6 flex items-center justify-between focus:outline-none accordion-toggle"
+                data-target="content-5"
+              >
+                <span class="text-lg font-semibold"
+                  >Can I edit my blog page with Elementor?</span
+                >
+                <span
+                  class="transform transition-transform duration-300 icon"
+                  id="icon-5"
+                  >+</span
+                >
+              </button>
+              <div
+                class="pl-4 pt-2 pb-4 hidden accordion-content"
+                id="content-5"
+              >
+                <p class="text-gray-300">
+                  Yes, you can easily edit your blog page with Elementor.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div
-        class="flex flex-col lg:flex-row items-center px-[30px] py-[15px] bg-white rounded-full drop-shadow-xl">
-        <!-- Menu links (hidden on smaller screens) -->
-        <div id="menu" class="justify-center items-center gap-8 hidden lg:flex">
-          <a
-            href="index.html"
-            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
-            >Home</a>
-          <a
-            href="about.html"
-            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
-            >About</a>
-          <a
-            href="contact.html"
-            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
-            >Schedule</a
-          >
-          <a
-            href="contact.html"
-            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
-            >FAQ</a
-          >
-          <a
-            href="contact.html"
-            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
-            >Contact</a
-          >
-          <a
-            href="contact.html"
-            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
-            >Sponsor</a
-          >
-        </div>
 
-        <!-- Hamburger icon (visible on small screens) -->
-        <a href="#" id="menu-toggle" class="lg:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="2em"
-            height="2em"
-            viewBox="0 0 24 24"
-          >
-            <g fill="none">
-              <path
-                d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
-              />
-              <path
-                fill="currentColor"
-                d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z"
-              />
-            </g>
-          </svg>
-        </a>
-        <div id="mobile-menu" class="flex flex-col gap-4 lg:hidden">
-          <a
-            href="index.html"
-            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
-            >About</a
-          >
-          <a
-            href="contact.html"
-            class="text-[#151515] text-[16px] font-medium hover:scale-90 transition-all"
-            >Schedule</a
-          >
-        </div>
-      </div>
-
-      <!-- Hidden mobile menu (visible when hamburger is clicked) -->
-      <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuToggle.addEventListener("click", function (e) {
-          e.preventDefault();
-          mobileMenu.classList.toggle("hidden");
-        });
-      </script>
-    </div>
-      
-    <div
-      class="containers flex flex-col justify-center items-center py-26 lg:py-20 animate-class px-8">
-      <img
-        src="image/cre1.png"
-        alt=""
-        width="150"
-        class="animate-bounce"
-      />
-      <div class="flex flex-col justify-center items-center pt-10 pb-20">
-        <h1
-          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-center text-[30px] md:text-[82px] animate-class"
-        >
-          Got a question?
-        </h1>
-        <h1
-          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-center text-[30px] md:text-[72px] animate-class"
-        >
-          Get your answer here!
-        </h1>
-      </div>
-    </div>
-
-    <body>
-      <div class="max-w-2xl mx-auto text-white">
-        <h2 class="text-white font-bold text-[30px] md:text-[48px] animate-class">General Question</h2>
-    
-        <!-- Accordion Item 1 -->
-        <div class="border-b">
-          <button class="w-full text-left py-3 flex items-center justify-between focus:outline-none" onclick="toggleAccordion(1)">
-            <span class="text-lg font-semibold">What is Elementor?</span>
-            <span class="transform transition-transform duration-300" id="icon-1">+</span>
-          </button>
-          <div class="pl-4 pt-2 pb-4 hidden accordion-content" id="content-1">
-            <p class="text-gray-600">Elementor is the ultimate & FREE WordPress website builder that lets you create beautiful websites in the easiest and quickest way possible.</p>
-          </div>
-        </div>
-    
-        <!-- Accordion Item 2 -->
-        <div class="border-b">
-          <button class="w-full text-left py-3 flex items-center justify-between focus:outline-none" onclick="toggleAccordion(2)">
-            <span class="text-lg font-semibold">Does it work with all themes?</span>
-            <span class="transform transition-transform duration-300" id="icon-2">+</span>
-          </button>
-          <div class="pl-4 pt-2 pb-4 hidden accordion-content" id="content-2">
-            <p class="text-gray-600">Yes, Elementor works with most WordPress themes that follow coding standards.</p>
-          </div>
-        </div>
-    
-        <!-- Accordion Item 3 -->
-        <div class="border-b">
-          <button class="w-full text-left py-3 flex items-center justify-between focus:outline-none" onclick="toggleAccordion(3)">
-            <span class="text-lg font-semibold">Does it work with other WordPress plugins?</span>
-            <span class="transform transition-transform duration-300" id="icon-3">+</span>
-          </button>
-          <div class="pl-4 pt-2 pb-4 hidden accordion-content" id="content-3">
-            <p class="text-gray-600">Yes, Elementor is compatible with most WordPress plugins.</p>
-          </div>
-        </div>
-    
-        <!-- Accordion Item 4 -->
-        <div class="border-b">
-          <button class="w-full text-left py-3 flex items-center justify-between focus:outline-none" onclick="toggleAccordion(4)">
-            <span class="text-lg font-semibold">What is Elementor Pro?</span>
-            <span class="transform transition-transform duration-300" id="icon-4">+</span>
-          </button>
-          <div class="pl-4 pt-2 pb-4 hidden accordion-content" id="content-4">
-            <p class="text-gray-600">Elementor Pro is the paid version with additional advanced features.</p>
-          </div>
-        </div>
-    
-        <!-- Accordion Item 5 -->
-        <div class="border-b">
-          <button class="w-full text-left py-3 flex items-center justify-between focus:outline-none" onclick="toggleAccordion(5)">
-            <span class="text-lg font-semibold">Can I edit my blog page with Elementor?</span>
-            <span class="transform transition-transform duration-300" id="icon-5">+</span>
-          </button>
-          <div class="pl-4 pt-2 pb-4 hidden accordion-content" id="content-5">
-            <p class="text-gray-600">Yes, you can easily edit your blog page with Elementor.</p>
-          </div>
-        </div>
-      </div>
-    </body>
-    
       <script src="js/app.js"></script>
       <style>
         .accordion-content {
@@ -198,44 +301,29 @@
         }
       </style>
       <script>
-        function toggleAccordion(index) {
-        // Get the content and icon of the clicked accordion
-        const content = document.getElementById(`content-${index}`);
-        const icon = document.getElementById(`icon-${index}`);
+        // Toggle accordion functionality
+        document.querySelectorAll(".accordion-toggle").forEach((button) => {
+          button.addEventListener("click", () => {
+            const targetId = button.getAttribute("data-target");
+            const content = document.getElementById(targetId);
+            const icon = button.querySelector(".icon");
 
-        // Collapse all accordion contents first
-        const allContents = document.querySelectorAll('.accordion-content');
-        const allIcons = document.querySelectorAll('[id^="icon-"]');
-        
-        allContents.forEach((item, idx) => {
-          if (idx + 1 !== index) {
-            item.style.maxHeight = null;
-            allIcons[idx].textContent = '+';
-            allIcons[idx].classList.remove('rotate-180');
-          }
+            // Toggle the current accordion content
+            const isOpen = content.classList.contains("hidden");
+            content.classList.toggle("hidden", !isOpen);
+            icon.textContent = isOpen ? "-" : "+";
+
+            // Collapse other accordion contents
+            document.querySelectorAll(".accordion-content").forEach((item) => {
+              if (item !== content) {
+                item.classList.add("hidden");
+                item.previousElementSibling.querySelector(".icon").textContent =
+                  "+";
+              }
+            });
+          });
         });
-
-        // Check if the current content is already expanded
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-          icon.textContent = '+';
-          icon.classList.remove('rotate-180');
-        } else {
-          content.style.maxHeight = content.scrollHeight + 'px'; // Expand current content
-          icon.textContent = '-';
-          icon.classList.add('rotate-180');
-        }
-
-        // Adjust subsequent buttons to move down
-        const currentContentHeight = content.scrollHeight;
-        const accordionItems = document.querySelectorAll('.border-b');
-
-        accordionItems.forEach((item, idx) => {
-          if (idx + 1 > index) {
-            item.style.transform = content.style.maxHeight ? `translateY(${currentContentHeight}px)` : 'translateY(0px)';
-          }
-        });
-      }
       </script>
-  </main>
+    </main>
+  </body>
 </html>
