@@ -37,7 +37,7 @@ body {
   font-family: "LINESeedSansTH_He", sans-serif;
 }
 
-.font-regular {
+.regular_font {
   font-family: "LINESeedSansTH_Rg", sans-serif;
 }
 
@@ -127,12 +127,6 @@ body {
   transition: background 0.3s ease;
 }
 
-.navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.8); /* You can adjust the color and transparency */
-  backdrop-filter: blur(10px);
-  border-radius: 0 0 40px 40px;
-
-}
 
 .workshop-card {
   display: flex;
