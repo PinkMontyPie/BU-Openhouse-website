@@ -1,117 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact and Partners - BU Open House</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-black text-white">
-
-  <!-- Navbar -->
-  <div class="flex flex-row justify-between items-center h-[110px] w-full sticky top-0 z-50 px-5 bg-black border-b border-gray-800">
-    <div class="containers flex flex-row justify-between items-center w-full">
-      <div class="flex items-center gap-4">
-        <a href="home.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all">
-          Back
-        </a>
-      </div>
-      <div class="flex justify-center items-center gap-5">
-        <img src="image/buicon.png" alt="logo" class="h-[70px] w-auto" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partners - BU Open House</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navbar -->
+    <div
+      class="flex flex-row justify-between items-center h-[110px] w-full sticky top-0 z-50 px-5 bg-black border-b border-gray-800"
+    >
+      <div class="containers flex flex-row justify-between items-center w-full">
+        <div class="flex items-center gap-4">
+          <a
+            href="home.html"
+            class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all"
+          >
+            Back
+          </a>
+        </div>
+        <div class="flex justify-center items-center gap-5">
+          <img src="image/buicon.png" alt="logo" class="h-[70px] w-auto" />
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Main Content -->
-  <div class="container mx-auto py-10 px-8">
-    
-    <!-- Contact Us Section -->
-    <div class="mb-10">
-      <h1 class="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent">
-        Contact Us
-      </h1>
-      <p class="text-center text-lg mt-4 text-gray-400">
-        Have questions or feedback? We'd love to hear from you!
-      </p>
+    <!-- Main Content -->
+    <div class="container mx-auto py-10 px-8">
+      <!-- Partners Section -->
+      <div>
+        <h1
+          class="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent"
+        >
+          Our Partners
+        </h1>
+        <p class="text-center text-lg mt-4 text-gray-400">
+          We are proud to partner with these organizations.
+        </p>
 
-      <div class="flex flex-col md:flex-row mt-10">
-        <!-- Contact Form -->
-        <div class="w-full md:w-1/2 bg-gray-800 p-8 rounded-lg shadow-lg">
-          <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
-          <form>
-            <div class="flex flex-col mb-4">
-              <label for="name" class="text-white mb-2">Full Name</label>
-              <input type="text" id="name" name="name" required class="p-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-[#961ADF]" />
-            </div>
-            <div class="flex flex-col mb-4">
-              <label for="email" class="text-white mb-2">Email</label>
-              <input type="email" id="email" name="email" required class="p-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-[#961ADF]" />
-            </div>
-            <div class="flex flex-col mb-4">
-              <label for="message" class="text-white mb-2">Message</label>
-              <textarea id="message" name="message" rows="4" required class="p-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-[#961ADF]"></textarea>
-            </div>
-            <div class="flex justify-center">
-              <button type="submit" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-lg hover:scale-105 transition-transform">
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
-
-        <!-- Contact Information -->
-        <div class="w-full md:w-1/2 md:ml-8 mt-10 md:mt-0">
-          <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
-          <p class="mb-2"><strong>Email:</strong> <a href="mailto:info@buopenhouse.com" class="text-[#F68129]">info@buopenhouse.com</a></p>
-          <p class="mb-2"><strong>Phone:</strong> <span class="text-[#F68129]">+66 1234 5678</span></p>
-          <p class="mb-2"><strong>Address:</strong> <span class="text-[#F68129]">Bangkok, Thailand</span></p>
-          <h2 class="text-2xl font-bold mt-8 mb-4">Follow Us</h2>
-          <div class="flex space-x-4">
-            <a href="#" class="text-[#F68129] hover:underline">Facebook</a>
-            <a href="#" class="text-[#F68129] hover:underline">Instagram</a>
-            <a href="#" class="text-[#F68129] hover:underline">Twitter</a>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-10">
+          <!-- Partner Card -->
+          <div
+            class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg"
+          >
+            <img
+              src="image/partner1.png"
+              alt="Partner 1"
+              class="h-20 w-auto mb-2"
+            />
+            <h3 class="text-lg font-bold">Partner 1</h3>
+            <p class="text-gray-400">Description of Partner 1.</p>
+          </div>
+          <div
+            class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg"
+          >
+            <img
+              src="image/partner2.png"
+              alt="Partner 2"
+              class="h-20 w-auto mb-2"
+            />
+            <h3 class="text-lg font-bold">Partner 2</h3>
+            <p class="text-gray-400">Description of Partner 2.</p>
+          </div>
+          <div
+            class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg"
+          >
+            <img
+              src="image/partner3.png"
+              alt="Partner 3"
+              class="h-20 w-auto mb-2"
+            />
+            <h3 class="text-lg font-bold">Partner 3</h3>
+            <p class="text-gray-400">Description of Partner 3.</p>
+          </div>
+          <div
+            class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg"
+          >
+            <img
+              src="image/partner4.png"
+              alt="Partner 4"
+              class="h-20 w-auto mb-2"
+            />
+            <h3 class="text-lg font-bold">Partner 4</h3>
+            <p class="text-gray-400">Description of Partner 4.</p>
+          </div>
+          <div
+            class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg"
+          >
+            <img
+              src="image/partner5.png"
+              alt="Partner 5"
+              class="h-20 w-auto mb-2"
+            />
+            <h3 class="text-lg font-bold">Partner 5</h3>
+            <p class="text-gray-400">Description of Partner 5.</p>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Partners Section -->
-    <div>
-      <h1 class="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent">
-        Our Partners
-      </h1>
-      <p class="text-center text-lg mt-4 text-gray-400">We are proud to partner with these organizations.</p>
-
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-10">
-        <!-- Partner Card -->
-        <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg">
-          <img src="image/partner1.png" alt="Partner 1" class="h-20 w-auto mb-2" />
-          <h3 class="text-lg font-bold">Partner 1</h3>
-          <p class="text-gray-400">Description of Partner 1.</p>
-        </div>
-        <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg">
-          <img src="image/partner2.png" alt="Partner 2" class="h-20 w-auto mb-2" />
-          <h3 class="text-lg font-bold">Partner 2</h3>
-          <p class="text-gray-400">Description of Partner 2.</p>
-        </div>
-        <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg">
-          <img src="image/partner3.png" alt="Partner 3" class="h-20 w-auto mb-2" />
-          <h3 class="text-lg font-bold">Partner 3</h3>
-          <p class="text-gray-400">Description of Partner 3.</p>
-        </div>
-        <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg">
-          <img src="image/partner4.png" alt="Partner 4" class="h-20 w-auto mb-2" />
-          <h3 class="text-lg font-bold">Partner 4</h3>
-          <p class="text-gray-400">Description of Partner 4.</p>
-        </div>
-        <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-lg">
-          <img src="image/partner5.png" alt="Partner 5" class="h-20 w-auto mb-2" />
-          <h3 class="text-lg font-bold">Partner 5</h3>
-          <p class="text-gray-400">Description of Partner 5.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</body>
+  </body>
 </html>

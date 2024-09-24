@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BU Openhouse Gallery</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Navbar -->
+    <div
+      class="flex flex-row justify-between items-center h-[100px] w-full sticky top-0 animate-class z-50 px-5 navbar"
+    >
+      <div
+        class="containers flex flex-row justify-between items-center h-[110px] w-full sticky top-0 animate-class z-50 px-5"
+      >
+        <div class="flex justify-center items-center gap-4">
+          <a
+            href="home.html"
+            class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all hover:rotate-3 hover:drop-shadow-[0_10px_10px_rgba(247,80,183,0.25)]"
+            >Back</a
+          >
+        </div>
+        <div class="flex justify-center items-center gap-5">
+          <div class="bg">
+            <img src="image/buicon.png" alt="logo" class="h-[50px] w-auto" />
+          </div>
+        </div>
+        <div
+          class="flex flex-row justify-between items-center gap-5 rounded-xl drop-shadow-xl"
+        >
+          <a
+            href="home.html"
+            class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+            >About</a
+          >
+          <a
+            href="speaker.html"
+            class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+            >Speaker
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="container mx-auto py-16 px-5 bg-black rounded-3xl  bg-opacity-60">
+      <h1
+        class="text-4xl font-bold text-center bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent mb-12"
+      >
+        BU Openhouse Gallery
+      </h1>
+
+      <!-- Gallery Grid -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+      >
+        <!-- Loop through images 1 to 12 -->
+        <div>
+          <img
+            src="image/act/1.jpg"
+            alt="Gallery Image 1"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+        <div>
+          <img
+            src="image/act/2.jpg"
+            alt="Gallery Image 2"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+        <div>
+          <img
+            src="image/act/3.jpg"
+            alt="Gallery Image 3"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+        <div>
+          <img
+            src="image/act/4.jpg"
+            alt="Gallery Image 4"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+        <div>
+          <img
+            src="image/act/5.jpg"
+            alt="Gallery Image 5"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+
+        <div>
+          <img
+            src="image/act/7.jpg"
+            alt="Gallery Image 7"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+        <div>
+          <img
+            src="image/act/8.jpg"
+            alt="Gallery Image 8"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+        <div>
+          <img
+            src="image/act/9.jpg"
+            alt="Gallery Image 9"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+        <div>
+          <img
+            src="image/act/10.jpg"
+            alt="Gallery Image 10"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+        <div>
+          <img
+            src="image/act/11.jpg"
+            alt="Gallery Image 11"
+            class="w-full h-72 object-cover rounded-lg hover:scale-105 transition-transform"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

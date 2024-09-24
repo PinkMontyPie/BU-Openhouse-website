@@ -74,21 +74,40 @@
     }
   </style>
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-white h-auto w-full">
 
   <!-- Navbar -->
-  <div class="flex flex-row justify-between items-center h-[110px] w-full sticky top-0 z-50 px-5 bg-black border-b border-gray-800">
-    <div class="containers flex flex-row justify-between items-center w-full">
-      <div class="flex items-center gap-4">
-        <a href="home.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all">
-          Back
-        </a>
+  <div
+        class="containers flex flex-row justify-between items-center h-[110px] w-full sticky top-0 animate-class z-50 px-5"
+      >
+        <div class="flex justify-center items-center gap-4">
+            <a href="home.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all">Back</a>
+        </div>
+        <div class="flex justify-center items-center gap-5">
+          <div class="bg">
+            <img src="image/buicon.png" alt="logo" class="h-[50px] w-auto" />
+          </div>
+        </div>
+        <div
+          class="flex flex-row justify-between items-center gap-5 rounded-xl drop-shadow-xl"
+        >
+          <a
+            href="home.html"
+            class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+            >About</a
+          >
+          <a
+            href="schedule.html"
+            class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+            >Schedule</a
+          >
+        </div>
       </div>
-      <div class="flex justify-center items-center gap-5">
-        <img src="image/buicon.png" alt="logo" class="h-[70px] w-auto" />
-      </div>
-    </div>
-  </div>
 
   <!-- Search Bar -->
   <div class="container mx-auto mt-10 px-8">
