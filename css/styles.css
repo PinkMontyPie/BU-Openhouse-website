@@ -50,10 +50,21 @@ body {
   max-width: 1340px;
 }
 
+.containers-read {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
 @media (min-width: 640px) {
   .containers {
     max-width: 1340px;
   }
+
+  .containers-read {
+    max-width: 1000px;
+  }
+
+  
 }
 
 .navbar {
