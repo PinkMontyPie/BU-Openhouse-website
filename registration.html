@@ -1,153 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BU Open House Registration</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-black text-white">
+  </head>
+  <body class=" text-white">
     <div
-        class="flex flex-col md:flex-row justify-between items-center md:h-[100px] w-full sticky top-0 animate-class z-50 px-5 navbar"
+      class="flex flex-col md:flex-row justify-between items-center md:h-[100px] w-full sticky top-0 animate-class z-50 px-5 navbar"
+    >
+      <div
+        class="containers flex flex-row justify-between items-center h-[110px] w-full sticky top-0 animate-class z-50 px-5"
       >
-        <div
-          class="containers flex flex-row justify-between items-center h-[110px] w-full sticky top-0 animate-class z-50 px-5"
-        >
-          <div class="hidden md:flex justify-center items-center gap-4">
-            <a
-              href="registration.html"
-              class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all hover:rotate-3 hover:drop-shadow-[0_10px_10px_rgba(247,80,183,0.25)]"
-              >Login</a
-            >
-          </div>
-          <div class="flex justify-center items-center gap-5">
-            <div class="bg">
-              <img src="image/buicon.png" alt="logo" class="h-[50px] w-auto" />
-            </div>
-          </div>
-          <div
-            class="hidden md:flex flex-row justify-between items-center rounded-xl drop-shadow-xl"
-          >
-            <a
-              href="home.html"
-              class="text-[#ffffff] text-[16px] font-medium transition-all hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full"
-              >Home</a
-            >
-            <a
-              href="about.html"
-              class="text-[#ffffff] text-[16px] font-medium transition-all hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full"
-              >About</a
-            >
-            <a
-              href="speaker.html"
-              class="text-[#ffffff] text-[16px] font-medium transition-all hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full"
-              >Speaker</a
-            >
-          </div>
-
-          <!-- Mobile menu icon -->
-          <div class="flex md:hidden">
-            <svg
-              id="menu-btn"
-              xmlns="http://www.w3.org/2000/svg"
-              width="2.5em"
-              height="2.5em"
-              viewBox="0 0 24 24"
-            >
-              <g fill="none">
-                <path
-                  d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
-                />
-                <path
-                  fill="#ffffff"
-                  d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z"
-                />
-              </g>
-            </svg>
-          </div>
-        </div>
-        <!-- Mobile Menu (initially hidden) -->
-        <div
-          id="mobile-menu"
-          class="hidden flex-col w-full justify-center items-center gap-8 text-white pb-10"
-        >
-          <a href="home.html" class="text-white text-[16px] font-medium"
-            >Home</a
-          >
-          <a href="about.html" class="text-white text-[16px] font-medium"
-            >About</a
-          >
-          <a href="speaker.html" class="text-white text-[16px] font-medium"
-            >Speaker</a
-          >
+        <div class="hidden md:flex justify-center items-center gap-4">
           <a
             href="registration.html"
-            class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white"
-            >Login</a
+            class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all hover:rotate-3 hover:drop-shadow-[0_10px_10px_rgba(247,80,183,0.25)]"
+            >Registration</a
           >
         </div>
+        <div class="flex justify-center items-center gap-5">
+          <div class="bg">
+            <img src="image/buicon.png" alt="logo" class="h-[50px] w-auto" />
+          </div>
+        </div>
+        <div
+          class="hidden md:flex flex-row justify-between items-center rounded-xl drop-shadow-xl"
+        >
+          <a
+            href="home.html"
+            class="text-[#ffffff] text-[16px] font-medium transition-all hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-[#ffffff] text-[16px] font-medium transition-all hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full"
+            >About</a
+          >
+          <a
+            href="FAQ.html"
+            class="text-[#ffffff] text-[16px] font-medium transition-all hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full"
+            >FAQ</a
+          >
+        </div>
+
+        <!-- Mobile menu icon -->
+        <div class="flex md:hidden">
+          <svg
+            id="menu-btn"
+            xmlns="http://www.w3.org/2000/svg"
+            width="2.5em"
+            height="2.5em"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none">
+              <path
+                d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+              />
+              <path
+                fill="#ffffff"
+                d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
-
-      <script>
-        const menuBtn = document.getElementById("menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuBtn.addEventListener("click", () => {
-          // Toggle the hidden class
-          mobileMenu.classList.toggle("hidden");
-          mobileMenu.classList.add("flex");
-          // You can also add a class for animation if needed
-        });
-      </script>
-
-    <!-- Registration Form Section -->
-    <div class="containers flex flex-row w-full justify-between items-center animate-class gap-10">
-        <div class="w-full max-w-2xl p-8 rounded-lg shadow-lg">
-            <h1 class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold  text-[40px] md:text-[60px]">Registration Form</h1>
-            <h1 class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent  text-[20px] md:text-[30px]">อยากเข้าร่วมกับเรา? กรอกฟอร์มข้างล่างเลย!</h1>
-            <form class="mt-10">
-                <div class="flex flex-col mb-4">
-                    <label for="name" class="text-white mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" required class="p-2 rounded-lg bg-black bg-opacity-30 text-white border border-gray-600 focus:outline-none focus:border-[#961ADF]" />
-                </div>
-                <div class="flex flex-col mb-4">
-                    <label for="email" class="text-white mb-2">Email</label>
-                    <input type="email" id="email" name="email" required class="p-2 rounded-lg bg-black bg-opacity-30 text-white border border-gray-600 focus:outline-none focus:border-[#961ADF]" />
-                </div>
-                <div class="flex flex-col mb-4">
-                    <label for="phone" class="text-white mb-2">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required class="p-2 rounded-lg bg-black bg-opacity-30 text-white border border-gray-600 focus:outline-none focus:border-[#961ADF]" />
-                </div>
-                <div class="flex flex-col mb-4">
-                    <label for="major" class="text-white mb-2">Section</label>
-                    <select id="major" name="major" required class="p-2 rounded-lg bg-black  text-white border bg-opacity-30  border-gray-600 focus:outline-none focus:border-[#961ADF]">
-                        <option value="" disabled selected>-- Select Section --</option>
-                        <option value="1">FullStack Developer - Build your own website</option>
-                        <option value="2">Data Analysis - More of your data</option>
-                        <option value="3">Cyber Security - White Hat Hacker</option>
-                        <option value="4">A successful story of professional in IT Industry</option>
-                        <option value="5">Developing with Low-Code Application Platform</option>
-                    </select>
-                </div>
-                <div class="flex flex-col mb-4">
-                    <label for="time" class="text-white mb-2">Time</label>
-                    <select id="time" name="time" required class="p-2 rounded-lg bg-black text-white border bg-opacity-30 border-gray-600 focus:outline-none focus:border-[#961ADF]">
-                        <option value="" disabled selected>-- Select Time --</option>
-                        <option value="1">Morning</option>
-                        <option value="2">Afternoon</option>
-                    </select>
-                </div>
-                <div class="flex justify-center pt-4">
-                    <button type="submit" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white py-3 px-8 rounded-lg hover:scale-105 transition-transform">Register</button>
-                </div>
-            </form>
-        </div>
-        <div class="hidden md:block w-full max-w-lg">
-            <img src="image/cre2.png" alt="Registration" class="h-full object-cover rounded-lg w-[350px] pl-24"  />
-        </div>
+      <!-- Mobile Menu (initially hidden) -->
+      <div
+        id="mobile-menu"
+        class="hidden flex-col w-full justify-center items-center gap-8 text-white pb-10"
+      >
+        <a href="home.html" class="text-white text-[16px] font-medium">Home</a>
+        <a href="about.html" class="text-white text-[16px] font-medium"
+          >About</a
+        >
+        <a href="speaker.html" class="text-white text-[16px] font-medium"
+          >Speaker</a
+        >
+        <a
+          href="FAQ.html"
+          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white"
+          >FAQ</a
+        >
+      </div>
     </div>
 
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        // Toggle the hidden class
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.add("flex");
+        // You can also add a class for animation if needed
+      });
+    </script>
+
+    <!-- Registration Form Section -->
+    <div
+      class="containers flex flex-row w-full justify-between items-center animate-class gap-10"
+    >
+      <div class="w-full max-w-2xl p-8 rounded-lg shadow-lg">
+        <h1
+          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[40px] md:text-[60px]"
+        >
+          Registration Form
+        </h1>
+        <h1
+          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent text-[20px] md:text-[30px]"
+        >
+          อยากเข้าร่วมกับเรา? กรอกฟอร์มข้างล่างเลย!
+        </h1>
+        <form class="mt-10">
+          <div class="flex flex-col mb-4">
+            <label for="name" class="text-white mb-2">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="p-2 rounded-lg bg-black bg-opacity-30 text-white border border-gray-600 focus:outline-none focus:border-[#961ADF]"
+            />
+          </div>
+          <div class="flex flex-col mb-4">
+            <label for="email" class="text-white mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="p-2 rounded-lg bg-black bg-opacity-30 text-white border border-gray-600 focus:outline-none focus:border-[#961ADF]"
+            />
+          </div>
+          <div class="flex flex-col mb-4">
+            <label for="phone" class="text-white mb-2">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              class="p-2 rounded-lg bg-black bg-opacity-30 text-white border border-gray-600 focus:outline-none focus:border-[#961ADF]"
+            />
+          </div>
+          <div class="flex flex-col mb-4">
+            <label for="major" class="text-white mb-2">Section</label>
+            <select
+              id="major"
+              name="major"
+              required
+              class="p-2 rounded-lg bg-black text-white border bg-opacity-30 border-gray-600 focus:outline-none focus:border-[#961ADF]"
+            >
+              <option value="" disabled selected>-- Select Section --</option>
+              <option value="1">
+                FullStack Developer - Build your own website
+              </option>
+              <option value="2">Data Analysis - More of your data</option>
+              <option value="3">Cyber Security - White Hat Hacker</option>
+              <option value="4">
+                A successful story of professional in IT Industry
+              </option>
+              <option value="5">
+                Developing with Low-Code Application Platform
+              </option>
+            </select>
+          </div>
+          <div class="flex flex-col mb-4">
+            <label for="time" class="text-white mb-2">Time</label>
+            <select
+              id="time"
+              name="time"
+              required
+              class="p-2 rounded-lg bg-black text-white border bg-opacity-30 border-gray-600 focus:outline-none focus:border-[#961ADF]"
+            >
+              <option value="" disabled selected>-- Select Time --</option>
+              <option value="1">Morning</option>
+              <option value="2">Afternoon</option>
+            </select>
+          </div>
+          <div class="flex justify-center pt-4">
+            <button
+              type="submit"
+              class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white py-3 px-8 rounded-lg hover:scale-105 transition-transform"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="hidden md:block w-full max-w-lg">
+        <img
+          src="image/cre2.png"
+          alt="Registration"
+          class="h-full object-cover rounded-lg w-[350px] pl-24"
+        />
+      </div>
+    </div>
+    <footer class="bg-black py-8 px-5">
+        <div
+          class="containers mx-auto flex flex-col md:flex-row justify-between items-center text-white"
+        >
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-lg font-bold">BU Open House</h3>
+            <p class="text-sm text-gray-400">
+              © 2024 Pai Peam Dream. All rights reserved. 
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="" class="text-gray-400 hover:text-white transition-all"
+              >Privacy Policy</a
+            >
+            <a href="" class="text-gray-400 hover:text-white transition-all"
+              >Terms of Service</a
+            >
+            <a href="contact.html" class="text-gray-400 hover:text-white transition-all"
+              >Contact Us</a
+            >
+          </div>
+          
+        </div>
+      </footer>
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>

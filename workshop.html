@@ -3,56 +3,205 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workshop List - BU Open House</title>
+    <title>Workshop & Speaker - BU Open House</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Three-dot loading animation */
+      .dot-loader {
+        display: inline-block;
+        position: relative;
+        width: 64px;
+        height: 20px;
+      }
+
+      .dot-loader div {
+        position: absolute;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #f68129;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+
+      .dot-loader div:nth-child(1) {
+        left: 8px;
+        animation: dotLoader 0.6s infinite;
+      }
+
+      .dot-loader div:nth-child(2) {
+        left: 32px;
+        animation: dotLoader 0.6s infinite 0.2s;
+      }
+
+      .dot-loader div:nth-child(3) {
+        left: 56px;
+        animation: dotLoader 0.6s infinite 0.4s;
+      }
+
+      @keyframes dotLoader {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.5);
+        }
+      }
+
+      /* Hide and show loading */
+      .loading-cards {
+        display: none;
+        margin-top: 16px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loading-cards.active {
+        display: flex;
+      }
+
+      /* Speaker card styling */
+      .speaker-card {
+        position: relative;
+      }
+
+      /* Hides the speaker cards when loading */
+      .speaker-card.hidden {
+        display: none;
+      }
+    </style>
   </head>
-  <body class="h-auto w-full text-white">
-    <!-- Navbar Section -->
+  <body class="h-auto w-full bg-black text-white">
+    <!-- Navbar -->
     <div
-      class="containers flex flex-row justify-between items-center h-[110px] w-full sticky top-0 animate-class z-50 px-5"
+      class="flex flex-col md:flex-row justify-between items-center md:h-[100px] w-full sticky top-0 animate-class z-50 px-5 navbar"
     >
-      <div class="flex justify-center items-center gap-4">
-        <a href="home.html" class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all">Back</a>
-      </div>
-      <div class="flex justify-center items-center gap-5">
-        <div class="bg">
-          <img src="image/buicon.png" alt="logo" class="h-[50px] w-auto" />
+      <div
+        class="containers flex flex-row justify-between items-center h-[110px] w-full sticky top-0 animate-class z-50 px-5"
+      >
+        <div class="hidden md:flex justify-center items-center gap-4">
+          <a
+            href="registration.html"
+            class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white hover:scale-95 transition-all hover:rotate-3 hover:drop-shadow-[0_10px_10px_rgba(247,80,183,0.25)]"
+            >Registration</a
+          >
+        </div>
+        <div class="flex justify-center items-center gap-5">
+          <div class="bg">
+            <img src="image/buicon.png" alt="logo" class="h-[50px] w-auto" />
+          </div>
+        </div>
+        <div
+          class="hidden md:flex flex-row justify-between items-center rounded-xl drop-shadow-xl"
+        >
+          <a
+            href="home.html"
+            class="text-[#ffffff] text-[16px] font-medium transition-all hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-[#ffffff] text-[16px] font-medium transition-all hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full"
+            >About</a
+          >
+          <a
+            href="workshop.html"
+            class="text-[#ffffff] text-[16px] font-medium transition-all hover:bg-white hover:bg-opacity-20 px-4 py-2 rounded-full"
+            >Workshop</a
+          >
+        </div>
+
+        <!-- Mobile menu icon -->
+        <div class="flex md:hidden">
+          <svg
+            id="menu-btn"
+            xmlns="http://www.w3.org/2000/svg"
+            width="2.5em"
+            height="2.5em"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none">
+              <path
+                d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+              />
+              <path
+                fill="#ffffff"
+                d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z"
+              />
+            </g>
+          </svg>
         </div>
       </div>
+      <!-- Mobile Menu (initially hidden) -->
       <div
-        class="flex flex-row justify-between items-center gap-5 rounded-xl drop-shadow-xl"
+        id="mobile-menu"
+        class="hidden flex-col w-full justify-center items-center gap-8 text-white pb-10"
       >
-        <a
-          href="home.html"
-          class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
-          >Home</a
-        >
-        <a
-          href="about.html"
-          class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
+        <a href="home.html" class="text-white text-[16px] font-medium">Home</a>
+        <a href="about.html" class="text-white text-[16px] font-medium"
           >About</a
         >
+        <a href="speaker.html" class="text-white text-[16px] font-medium"
+          >Speaker</a
+        >
         <a
-          href="schedule.html"
-          class="text-[#ffffff] text-[16px] font-medium hover:scale-90 transition-all"
-          >Schedule</a
+          href="registration.html"
+          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white"
+          >Registration</a
         >
       </div>
     </div>
 
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        // Toggle the hidden class
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.add("flex");
+        // You can also add a class for animation if needed
+      });
+    </script>
+
+    <!-- Search Bar -->
+    <div class="containers mx-auto mt-10 px-8">
+      <div class="flex justify-center mb-8">
+        <input
+          type="text"
+          placeholder="Search for speakers or sessions..."
+          class="w-full md:w-1/2 px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-[#F68129]"
+          id="searchInput"
+          oninput="showLoadingAndSearch()"
+        />
+      </div>
+    </div>
     <!-- Workshop List Section -->
-    <div class="containers flex flex-col justify-center items-center py-6 px-8">
-      <h1
-        class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[40px] md:text-[60px] animate-class"
-      >
-        Workshops
-      </h1>
-      <h2
-        class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[20px] md:text-[30px] animate-class"
-      >
-        Explore our workshop here!
-      </h2>
+    <div class="containers mx-auto py-8 px-8 relative">
+      <div class="flex justify-center flex-col items-center">
+        <h1
+          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[40px] md:text-[60px] animate-class"
+        >
+          Workshops
+        </h1>
+        <h2
+          class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[20px] md:text-[30px] animate-class"
+        >
+          Explore our workshop here!
+        </h2>
+      </div>
+      <!-- Loading Indicator under "Meet Our Speakers" -->
+      <div id="loadingCards" class="loading-cards">
+        <div class="dot-loader">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 w-full">
         <!-- Workshop Card 1 -->
         <div
@@ -79,7 +228,7 @@
             Calling anyone passionate about programming and who loves the
             complexity of code writing!
           </p>
-          <div class="mt-auto border-t border-gray-600  pt-4">
+          <div class="mt-auto border-t border-gray-600 pt-4">
             <p class="text-gray-300">
               School of Information Technology and Innovation | Computer Science
             </p>
@@ -112,7 +261,7 @@
             Explore data analysis techniques and tools to derive insights from
             your data.
           </p>
-          <div class="mt-auto border-t border-gray-600  pt-4">
+          <div class="mt-auto border-t border-gray-600 pt-4">
             <p class="text-gray-300">
               School of Information Technology and Innovation | Computer Science
               - Data Science and Cybersecurity
@@ -146,7 +295,7 @@
             IT workshop is calling for those interested in bugs and becoming a
             White Hat Hacker!
           </p>
-          <div class="mt-auto border-t border-gray-600  pt-4">
+          <div class="mt-auto border-t border-gray-600 pt-4">
             <p class="text-gray-300">
               School of Information Technology and Innovation | Computer Science
               - Data Science and Cybersecurity
@@ -178,7 +327,7 @@
           <p class="text-gray-400 mb-4">
             Experience low-code development with Oracle APEX.
           </p>
-          <div class="mt-auto border-t border-gray-600  pt-4">
+          <div class="mt-auto border-t border-gray-600 pt-4">
             <p class="text-gray-300">
               School of Information Technology and Innovation | Information
               Technology
@@ -210,7 +359,7 @@
           <p class="text-gray-400 mb-4">
             Get insights from field experts and leading IT companies.
           </p>
-          <div class="mt-auto border-t border-gray-600  pt-4">
+          <div class="mt-auto border-t border-gray-600 pt-4">
             <p class="text-gray-300">
               School of Information Technology and Innovation | Information
               Technology
@@ -266,5 +415,279 @@
 
     <script src="js/app.js"></script>
     <script src="js/script.js"></script>
+    <!-- Speakers Section -->
+    <div class="containers mx-auto py-8 px-8 relative">
+      <h1
+        class="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent"
+      >
+        Meet Our Speakers
+      </h1>
+
+      <!-- Loading Indicator under "Meet Our Speakers" -->
+      <div id="loadingCards" class="loading-cards">
+        <div class="dot-loader">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div
+        id="speakerGrid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12"
+      >
+        <!-- Speaker 1 -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card"
+          data-name="Pai Soravith"
+          data-session="FullStack Development"
+        >
+          <img
+            src="image/speaker1.jpg"
+            alt="Speaker 1"
+            class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover"
+          />
+          <h2 class="text-center mt-4 text-xl font-bold text-white">
+            Pai Soravith
+          </h2>
+          <p class="text-center text-gray-400">CTO, XYZ Corp.</p>
+          <p class="mt-2 text-center text-[#F68129]">
+            Session: FullStack Developer - Build your own website
+          </p>
+          <p class="mt-4 text-gray-300 text-center">
+            Expert in web development and cybersecurity with 15+ years of
+            experience.
+          </p>
+          <div class="flex justify-center mt-6">
+            <a
+              href="speaker1.html"
+              class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform"
+            >
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Speaker 2 -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card"
+          data-name="Pirawish Pathumngoen"
+          data-session="FullStack Development"
+        >
+          <img
+            src="image/ppl/peamnobg.png"
+            alt="Speaker 2"
+            class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover"
+          />
+          <h2 class="text-center mt-4 text-xl font-bold text-white">
+            Pirawish Pathumngoen
+          </h2>
+          <p class="text-center text-gray-400">Data Scientist, ABC Analytics</p>
+          <p class="mt-2 text-center text-[#F68129]">
+            Session: FullStack Developer - Build your own website
+          </p>
+          <p class="mt-4 text-gray-300 text-center">
+            Specialist in big data and machine learning with industry expertise.
+          </p>
+          <div class="flex justify-center mt-6">
+            <a
+              href="speaker2.html"
+              class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform"
+            >
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Speaker 3 -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card"
+          data-name="Anya Worasit"
+          data-session="Cyber Security"
+        >
+          <img
+            src="image/speaker3.jpg"
+            alt="Speaker 3"
+            class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover"
+          />
+          <h2 class="text-center mt-4 text-xl font-bold text-white">
+            Anya Worasit
+          </h2>
+          <p class="text-center text-gray-400">
+            Security Analyst, White Hat Security
+          </p>
+          <p class="mt-2 text-center text-[#F68129]">
+            Session: Cyber Security - White Hat Hacker
+          </p>
+          <p class="mt-4 text-gray-300 text-center">
+            Cybersecurity expert with experience in ethical hacking and threat
+            analysis.
+          </p>
+          <div class="flex justify-center mt-6">
+            <a
+              href="speaker3.html"
+              class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform"
+            >
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Speaker 4 -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card"
+          data-name="Somchai Kritsanakorn"
+          data-session="Low-Code Development"
+        >
+          <img
+            src="image/speaker4.jpg"
+            alt="Speaker 4"
+            class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover"
+          />
+          <h2 class="text-center mt-4 text-xl font-bold text-white">
+            Somchai Kritsanakorn
+          </h2>
+          <p class="text-center text-gray-400">
+            Low-Code Developer, LowCode Innovations
+          </p>
+          <p class="mt-2 text-center text-[#F68129]">
+            Session: Developing with Low-Code Application Platform
+          </p>
+          <p class="mt-4 text-gray-300 text-center">
+            Innovative solutions with low-code platforms to accelerate
+            development.
+          </p>
+          <div class="flex justify-center mt-6">
+            <a
+              href="speaker4.html"
+              class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform"
+            >
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Speaker 5 -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-lg speaker-card"
+          data-name="Maya Chan"
+          data-session="IT Professional Journey"
+        >
+          <img
+            src="image/speaker5.jpg"
+            alt="Speaker 5"
+            class="w-40 h-40 rounded-full mx-auto border-4 border-[#F68129] object-cover"
+          />
+          <h2 class="text-center mt-4 text-xl font-bold text-white">
+            Maya Chan
+          </h2>
+          <p class="text-center text-gray-400">
+            Consultant, TechPro Consulting
+          </p>
+          <p class="mt-2 text-center text-[#F68129]">
+            Session: A successful story of professional in IT Industry
+          </p>
+          <p class="mt-4 text-gray-300 text-center">
+            Guiding young professionals through the IT industry with mentorship
+            and growth.
+          </p>
+          <div class="flex justify-center mt-6">
+            <a
+              href="speaker5.html"
+              class="bg-gradient-to-r from-[#961ADF] to-[#F68129] text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform"
+            >
+              View Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Function to show the card grid loading indicator, hide cards, wait for 1 second, then perform the search
+      function showLoadingAndSearch() {
+        const loadingCards = document.getElementById("loadingCards");
+        const speakerCards = document.querySelectorAll(".speaker-card");
+        const workshopCards = document.querySelectorAll(".workshop-card");
+        const loadingCards2 = document.getElementById("loadingCards");
+        loadingCards.classList.add("active");
+        loadingCards2.classList.add("active");
+
+        // Hide all cards during loading
+        speakerCards.forEach((card) => {
+          card.classList.add("hidden");
+        });
+        workshopCards.forEach((card) => {
+          card.classList.add("hidden");
+        });
+
+        // Simulate a loading delay of 1 second
+        setTimeout(() => {
+          filterSpeakersAndWorkshops();
+          loadingCards.classList.remove("active");
+          loadingCards2.classList.remove("active");
+          speakerCards.forEach((card) => {
+            card.classList.remove("hidden");
+          });
+          workshopCards.forEach((card) => {
+            card.classList.remove("hidden");
+          });
+        }, 1000);
+      }
+
+      // Function to filter speakers and workshops based on the search input
+      function filterSpeakersAndWorkshops() {
+        const input = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const speakerCards = document.querySelectorAll(".speaker-card");
+        const workshopCards = document.querySelectorAll(".workshop-card");
+
+        speakerCards.forEach((card) => {
+          const name = card.getAttribute("data-name").toLowerCase();
+          const session = card.getAttribute("data-session").toLowerCase();
+
+          if (name.includes(input) || session.includes(input)) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        workshopCards.forEach((card) => {
+          const title = card.getAttribute("data-title").toLowerCase();
+
+          if (title.includes(input)) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+    </script>
+    <footer class="bg-black py-8 px-5"></footer>
+      <div
+        class="containers mx-auto flex flex-col md:flex-row justify-between items-center text-white"
+      >
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-lg font-bold">BU Open House</h3>
+          <p class="text-sm text-gray-400">
+            © 2024 Pai Peam Dream. All rights reserved. 
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="" class="text-gray-400 hover:text-white transition-all"
+            >Privacy Policy</a
+          >
+          <a href="" class="text-gray-400 hover:text-white transition-all"
+            >Terms of Service</a
+          >
+          <a href="contact.html" class="text-gray-400 hover:text-white transition-all"
+            >Contact Us</a
+          >
+        </div>
+        
+      </div>
+    </footer>
   </body>
 </html>
