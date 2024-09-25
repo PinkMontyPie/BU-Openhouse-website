@@ -75,7 +75,8 @@
       }
     </style>
   </head>
-  <body class="h-auto w-full bg-black text-white">
+
+  <body class="h-auto w-full min-h-screen text-white">
     <!-- Navbar -->
     <div
       class="flex flex-col md:flex-row justify-between items-center md:h-[100px] w-full sticky top-0 animate-class z-50 px-5 navbar"
@@ -149,9 +150,9 @@
           >Speaker</a
         >
         <a
-          href="registration.html"
+          href="FAQ.html"
           class="bg-gradient-to-r from-[#961ADF] to-[#F68129] font-bold text-white px-8 py-2 rounded-full border-2 border-white"
-          >Registration</a
+          >FAQ</a
         >
       </div>
     </div>
@@ -170,18 +171,19 @@
 
     <!-- Search Bar -->
     <div class="containers mx-auto mt-10 px-8">
-      <div class="flex justify-center mb-8">
+      <div class="flex justify-center">
         <input
           type="text"
           placeholder="Search for speakers or sessions..."
-          class="w-full md:w-1/2 px-4 py-2 rounded-full bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-[#F68129]"
+          class="w-full md:w-1/2 px-4 py-2 rounded-full bg-gray-800 text-white border-white border-2 focus:outline-none focus:ring-2 focus:ring-[#F68129]"
           id="searchInput"
           oninput="showLoadingAndSearch()"
         />
       </div>
     </div>
     <!-- Workshop List Section -->
-    <div class="containers mx-auto py-8 px-8 relative">
+
+    <div class="containers mx-auto py-4 px-8 relative ">
       <div class="flex justify-center flex-col items-center">
         <h1
           class="bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent font-bold text-[40px] md:text-[60px] animate-class"
@@ -195,7 +197,7 @@
         </h2>
       </div>
       <!-- Loading Indicator under "Meet Our Speakers" -->
-      <div id="loadingCards" class="loading-cards">
+      <div id="loadingCards" class="loading-cards pt-20">
         <div class="dot-loader">
           <div></div>
           <div></div>
@@ -420,11 +422,11 @@
       <h1
         class="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#961ADF] to-[#F68129] bg-clip-text text-transparent"
       >
-        Meet Our Speakers
+        Our Speakers
       </h1>
 
       <!-- Loading Indicator under "Meet Our Speakers" -->
-      <div id="loadingCards" class="loading-cards">
+      <div id="loadingCards" class="loading-cards pt-20">
         <div class="dot-loader">
           <div></div>
           <div></div>
@@ -455,8 +457,7 @@
             Session: FullStack Developer - Build your own website
           </p>
           <p class="mt-4 text-gray-300 text-center">
-            Expert in web development with 15+ years of
-            experience.
+            Expert in web development with 15+ years of experience.
           </p>
           <div class="flex justify-center mt-6">
             <a
@@ -513,11 +514,10 @@
           <h2 class="text-center mt-4 text-xl font-bold text-white">
             Nipaporn Phomsak
           </h2>
-          <p class="text-center text-gray-400">
-            Data Analyst, CoSI
-          </p>
+          <p class="text-center text-gray-400">Data Analyst, CoSI</p>
           <p class="mt-2 text-center text-[#F68129]">
-            Session: Data Analysis and Visualization Techniques (Data Science and Data Visualization)
+            Session: Data Analysis and Visualization Techniques (Data Science
+            and Data Visualization)
           </p>
           <p class="mt-4 text-gray-300 text-center">
             Cybersecurity expert with experience in ethical hacking and threat
@@ -597,29 +597,33 @@
         });
       }
     </script>
-    <footer class="bg-black py-8 px-5"></footer>
-      <div
-        class="containers mx-auto flex flex-col md:flex-row justify-between items-center text-white"
-      >
-        <div class="mb-4 md:mb-0">
-          <h3 class="text-lg font-bold">BU Open House</h3>
-          <p class="text-sm text-gray-400">
-            © 2024 Pai Peam Dream. All rights reserved. 
-          </p>
-        </div>
-        <div class="flex space-x-4">
-          <a href="" class="text-gray-400 hover:text-white transition-all"
-            >Privacy Policy</a
-          >
-          <a href="" class="text-gray-400 hover:text-white transition-all"
-            >Terms of Service</a
-          >
-          <a href="contact.html" class="text-gray-400 hover:text-white transition-all"
-            >Contact Us</a
-          >
-        </div>
-        
-      </div>
-    </footer>
   </body>
+  <div class="h-[360px] bg-transparent">
+    
+  </div>
+  <footer class=" bg-black py-8 px-5 ">
+    <div
+      class="containers mx-auto flex flex-col md:flex-row justify-between items-center text-white"
+    >
+      <div class="mb-4 md:mb-0">
+        <h3 class="text-lg font-bold">BU Open House</h3>
+        <p class="text-sm text-gray-400">
+          © 2024 Pai Peam Dream. All rights reserved.
+        </p>
+      </div>
+      <div class="flex space-x-4">
+        <a href="" class="text-gray-400 hover:text-white transition-all"
+          >Privacy Policy</a
+        >
+        <a href="" class="text-gray-400 hover:text-white transition-all"
+          >Terms of Service</a
+        >
+        <a
+          href="contact.html"
+          class="text-gray-400 hover:text-white transition-all"
+          >Contact Us</a
+        >
+      </div>
+    </div>
+  </footer>
 </html>
